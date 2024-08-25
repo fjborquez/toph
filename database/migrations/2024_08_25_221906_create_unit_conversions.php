@@ -13,8 +13,8 @@ return new class extends Migration
     {
         Schema::create('unit_conversions', function (Blueprint $table) {
             $table->id();
-            $table->foreignId('from_unit_id')->constrained('unit_of_measurament');
-            $table->foreignId('to_unit_id')->constrained('unit_of_measurament');
+            $table->foreignId('from_unit_id')->constrained('unit_of_measurement');
+            $table->foreignId('to_unit_id')->constrained('unit_of_measurement');
             $table->decimal('factor', 14, 7);
             $table->timestamps();
         });
