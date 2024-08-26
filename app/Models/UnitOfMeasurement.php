@@ -14,6 +14,6 @@ class UnitOfMeasurement extends Model
     protected $fillable = [
         'name',
         'abbreviation',
-        'category_id'
+        'category_id',
     ];
 }
