@@ -1,7 +1,8 @@
 <?php
+
 namespace App\Enums;
 
- enum UOMEnum: int
+enum UOMEnum: int
 {
     case MASS = 1;
     case VOLUME = 2;

@@ -14,6 +14,7 @@ class UnitOfMeasurementController extends Controller
     public function list(UOMRequest $uomRequest)
     {
         $categoryIds = $uomRequest->input('categoryIds') ? explode(',', $uomRequest->input('categoryIds')) : null;
+
         return $this->unitOfMeasurementService->getList($categoryIds);
     }
 }

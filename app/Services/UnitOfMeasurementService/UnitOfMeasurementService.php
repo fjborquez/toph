@@ -13,7 +13,7 @@ class UnitOfMeasurementService implements UnitOfMeasurementServiceInterface
     {
         $queryBuilder = QueryBuilder::for(UnitOfMeasurement::class)->allowedFilters('category_id');
 
-        if (!empty($categoryIds)) {
+        if (! empty($categoryIds)) {
             $queryBuilder->whereIn('category_id', $categoryIds);
         }
 

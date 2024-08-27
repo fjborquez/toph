@@ -6,8 +6,6 @@ use Illuminate\Database\Eloquent\Collection;
 use Spatie\QueryBuilder\QueryBuilder;
 use Tests\TestCase;
 
-use function PHPUnit\Framework\assertEquals;
-
 class UnitOfMeasurementServiceTest extends TestCase
 {
     private $mockedUnitOfMeasurementService;
@@ -129,7 +127,7 @@ class UnitOfMeasurementServiceTest extends TestCase
                 'updated_at' => null,
             ],
         ]);
-        $mockQueryBuilder = Mockery::mock('alias:' . QueryBuilder::class);
+        $mockQueryBuilder = Mockery::mock('alias:'.QueryBuilder::class);
         $mockQueryBuilder->shouldReceive('for')
             ->andReturnSelf();
         $mockQueryBuilder->shouldReceive('allowedFilters')
@@ -251,7 +249,7 @@ class UnitOfMeasurementServiceTest extends TestCase
                 'updated_at' => null,
             ],
         ]);
-        $mockQueryBuilder = Mockery::mock('alias:' . QueryBuilder::class);
+        $mockQueryBuilder = Mockery::mock('alias:'.QueryBuilder::class);
         $mockQueryBuilder->shouldReceive('for')
             ->andReturnSelf();
         $mockQueryBuilder->shouldReceive('allowedFilters')
@@ -267,7 +265,7 @@ class UnitOfMeasurementServiceTest extends TestCase
 
     public function test_should_retrieve_count_unit_of_measurement_list()
     {
-        $mockQueryBuilder = Mockery::mock('alias:' . QueryBuilder::class);
+        $mockQueryBuilder = Mockery::mock('alias:'.QueryBuilder::class);
 
         $mockQueryBuilder->shouldReceive('for')
             ->andReturnSelf();
@@ -297,7 +295,7 @@ class UnitOfMeasurementServiceTest extends TestCase
 
     public function test_should_retrieve_time_unit_of_measurement_list()
     {
-        $mockQueryBuilder = Mockery::mock('alias:' . QueryBuilder::class);
+        $mockQueryBuilder = Mockery::mock('alias:'.QueryBuilder::class);
 
         $mockQueryBuilder->shouldReceive('for')
             ->andReturnSelf();
@@ -343,7 +341,7 @@ class UnitOfMeasurementServiceTest extends TestCase
 
     public function test_should_retrieve_mass_or_volume_unit_of_measurement_list()
     {
-        $mockQueryBuilder = Mockery::mock('alias:' . QueryBuilder::class);
+        $mockQueryBuilder = Mockery::mock('alias:'.QueryBuilder::class);
 
         $mockQueryBuilder->shouldReceive('for')
             ->andReturnSelf();
@@ -434,5 +432,4 @@ class UnitOfMeasurementServiceTest extends TestCase
         $result = $this->mockedUnitOfMeasurementService->getList([UOMEnum::MASS, UOMEnum::VOLUME]);
         $this->assertEquals(9, $result->count());
     }
-
 }
