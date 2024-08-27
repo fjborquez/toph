@@ -1,9 +1,10 @@
 <?php
+namespace App\Enums;
 
-trait UOMTrait
+ enum UOMEnum: int
 {
-    const MASS_UOM = 1;
-    const VOLUME_UOM = 2;
-    const TIME_UOM = 3;
-    const COUNT_UOM = 3;
+    case MASS = 1;
+    case VOLUME = 2;
+    case TIME = 3;
+    case COUNT = 4;
 }

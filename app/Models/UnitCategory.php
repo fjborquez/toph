@@ -6,26 +6,19 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
 
-class UnitOfMeasurement extends Model
+class UnitCategory extends Model
 {
     use HasFactory;
 
-    protected $table = 'unit_of_measurement';
+    protected $table = 'unit_categories';
 
     protected $fillable = [
         'name',
-        'abbreviation',
-        'category_id',
+        'description',
     ];
 
     protected $casts = [
         'name' => 'string',
-        'abbreviation' => 'string',
-        'category_id' => 'integer',
+        'description' => 'string',
     ];
-
-    public function category(): BelongsTo
-    {
-
-    }
 }
