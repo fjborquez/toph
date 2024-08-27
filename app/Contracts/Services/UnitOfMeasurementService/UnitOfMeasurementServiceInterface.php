@@ -6,5 +6,5 @@ use Illuminate\Database\Eloquent\Collection;
 
 interface UnitOfMeasurementServiceInterface
 {
-    public function getList(): Collection;
+    public function getList(?array $categoryIds): Collection;
 }

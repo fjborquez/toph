@@ -26,6 +26,6 @@ class UnitOfMeasurement extends Model
 
     public function category(): BelongsTo
     {
-        return $this->belongsTo(UnitCategory::class, 'category_id');
+
     }
 }
