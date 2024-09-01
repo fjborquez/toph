@@ -20,7 +20,8 @@ class UnitOfMeasurementController extends Controller
         return $this->unitOfMeasurementService->getList($categoryIds);
     }
 
-    public function get(int $id) {
+    public function get(int $id)
+    {
         try {
             return response()->json($this->unitOfMeasurementService->get($id), Response::HTTP_OK);
         } catch (ResourceNotFoundException $exception) {

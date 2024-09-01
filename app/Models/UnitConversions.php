@@ -15,7 +15,7 @@ class UnitConversions extends Model
     protected $fillable = [
         'from_unit_id',
         'to_unit_id',
-        'factor'
+        'factor',
     ];
 
     public function fromUnit(): BelongsTo
