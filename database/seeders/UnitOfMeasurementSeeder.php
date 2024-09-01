@@ -26,7 +26,10 @@ class UnitOfMeasurementSeeder extends Seeder
                 ['id' => 10, 'description' => 'Hours', 'abbreviation' => 'hr', 'category_id' => 3],
                 ['id' => 11, 'description' => 'Minutes', 'abbreviation' => 'min', 'category_id' => 3],
                 ['id' => 12, 'description' => 'Seconds', 'abbreviation' => 'sec', 'category_id' => 3],
-                ['id' => 13, 'description' => 'Unit', 'abbreviation' => 'ud', 'category_id' => 4],
+                ['id' => 13, 'description' => 'Unit', 'abbreviation' => 'u', 'category_id' => 4],
+                ['id' => 14, 'description' => 'Pinch', 'abbreviation' => 'pinch', 'category_id' => 2],
+                ['id' => 15, 'description' => 'Handful', 'abbreviation' => 'handful', 'category_id' => 2],
+                ['id' => 16, 'description' => 'Measure', 'abbreviation' => 'meas', 'category_id' => 2],
             ]);
         }
     }
