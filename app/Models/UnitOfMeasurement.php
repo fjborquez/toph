@@ -5,6 +5,7 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
+use Illuminate\Database\Eloquent\Relations\HasMany;
 
 class UnitOfMeasurement extends Model
 {
@@ -27,5 +28,15 @@ class UnitOfMeasurement extends Model
     public function category(): BelongsTo
     {
         return $this->belongsTo(UnitCategory::class, 'category_id');
+    }
+
+    public function fromConversions(): HasMany
+    {
+        return $this->hasMany(UnitConversions::class, 'from_unit_id');
+    }
+
+    public function toConversions(): HasMany
+    {
+        return $this->hasMany(UnitConversions::class, 'to_unit_id');
     }
 }
