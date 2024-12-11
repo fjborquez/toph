@@ -2,6 +2,8 @@
 
 use App\Exceptions\ResourceNotFoundException;
 use App\Services\UnitOfMeasurementService\UnitOfMeasurementService;
+use Illuminate\Database\Eloquent\Collection;
+use Spatie\QueryBuilder\QueryBuilder;
 use Tests\TestCase;
 
 class UnitOfMeasurementServiceTest extends TestCase
