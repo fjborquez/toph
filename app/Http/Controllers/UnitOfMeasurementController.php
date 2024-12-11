@@ -13,11 +13,9 @@ class UnitOfMeasurementController extends Controller
         private readonly UnitOfMeasurementServiceInterface $unitOfMeasurementService
     ) {}
 
-    public function list(UOMRequest $uomRequest)
+    public function list()
     {
-        $categoryIds = $uomRequest->input('categoryIds') ? explode(',', $uomRequest->input('categoryIds')) : null;
-
-        return $this->unitOfMeasurementService->getList($categoryIds);
+        return $this->unitOfMeasurementService->getList();
     }
 
     public function get(int $id)
