@@ -10,15 +10,11 @@ use Spatie\QueryBuilder\QueryBuilder;
 
 class UnitOfMeasurementService implements UnitOfMeasurementServiceInterface
 {
-    public function getList(?array $categoryIds): Collection
+    public function getList(): Collection
     {
-        $queryBuilder = QueryBuilder::for(UnitOfMeasurement::class)->allowedFilters('category_id');
-
-        if (! empty($categoryIds)) {
-            $queryBuilder->whereIn('category_id', $categoryIds);
-        }
-
-        return $queryBuilder->get();
+        return QueryBuilder::for(UnitOfMeasurement::class)
+            ->allowedFilters(['category.name'])
+            ->get();
     }
 
     public function get(int $id): UnitOfMeasurement

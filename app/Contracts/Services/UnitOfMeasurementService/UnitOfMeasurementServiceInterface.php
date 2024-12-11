@@ -7,7 +7,7 @@ use Illuminate\Database\Eloquent\Collection;
 
 interface UnitOfMeasurementServiceInterface
 {
-    public function getList(?array $categoryIds): Collection;
+    public function getList(): Collection;
 
     public function get(int $id): UnitOfMeasurement;
 }
