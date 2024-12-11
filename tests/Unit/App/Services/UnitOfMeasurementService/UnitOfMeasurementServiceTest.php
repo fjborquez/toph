@@ -12,7 +12,7 @@ class UnitOfMeasurementServiceTest extends TestCase
 
     private $model;
 
-    public function setUp(): void
+    protected function setUp(): void
     {
         parent::setUp();
         $this->mockedUnitOfMeasurementService = new UnitOfMeasurementService;
