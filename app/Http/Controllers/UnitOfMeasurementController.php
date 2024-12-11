@@ -4,7 +4,6 @@ namespace App\Http\Controllers;
 
 use App\Contracts\Services\UnitOfMeasurementService\UnitOfMeasurementServiceInterface;
 use App\Exceptions\ResourceNotFoundException;
-use App\Http\Requests\UOMRequest;
 use Symfony\Component\HttpFoundation\Response;
 
 class UnitOfMeasurementController extends Controller
