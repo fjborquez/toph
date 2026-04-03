@@ -13,7 +13,7 @@ class UnitOfMeasurementService implements UnitOfMeasurementServiceInterface
     public function getList(): Collection
     {
         return QueryBuilder::for(UnitOfMeasurement::class)
-            ->allowedFilters(['category.name'])
+            ->allowedFilters('category.name')
             ->get();
     }
 

@@ -1,6 +1,9 @@
 <?php
 
+use App\Providers\AppServiceProvider;
+use App\Providers\UnitOfMeasurementServiceProvider;
+
 return [
-    App\Providers\AppServiceProvider::class,
-    App\Providers\UnitOfMeasurementServiceProvider::class,
+    AppServiceProvider::class,
+    UnitOfMeasurementServiceProvider::class,
 ];
